@@ -1,0 +1,43 @@
+---
+- name: Update package cache on Ubuntu
+  apt:
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+- name: Update package cache on CentOS
+  yum:
+    name: '*'
+    state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Install MariaDB on Ubuntu
+  apt:
+    name: mariadb-server
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install MariaDB on CentOS
+  yum:
+    name: mariadb-server
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Create a MariaDB's custom configuration file
+  template:
+    src: templates/mariadb.conf.j2
+    dest: "{{ mariadb_conf_path }}"
+    mode: '0644'
+  notify: Restart MariaDB
+
+- name: Create a new database
+  community.mysql.mysql_db:
+    name: test_db
+    state: present
+    login_unix_socket: "{{ login_unix_socket }}"
+
+- name: Create a new database user
+  community.mysql.mysql_user:
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+    priv: "test_db.*:ALL"
+    state: present

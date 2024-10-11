@@ -1,0 +1,28 @@
+---
+- name: Ensure Python is installed on all hosts
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Python on Ubuntu
+      apt:
+        name: python3
+        state: present
+      when: ansible_os_family == "Debian"
+    
+    - name: Install Python on CentOS
+      yum:
+        name: python3
+        state: present
+      when: ansible_os_family == "RedHat"
+
+- name: Install and setup Apache2 service
+  hosts: web
+  become: true
+  roles:
+    - role: apache2
+
+- name: Install and setup MariaDB service
+  hosts: db
+  become: true
+  roles:
+    - role: mariadb

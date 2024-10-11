@@ -1,0 +1,3 @@
+ansible_user: centos
+apache_conf_path: "/etc/httpd/conf/httpd.conf"
+mariadb_conf_path: "/etc/my.cnf"

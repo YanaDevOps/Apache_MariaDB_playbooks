@@ -1,0 +1,4 @@
+ansible_user: ubuntu
+apache_conf_path: "/etc/apache2/apache2.conf"
+mariadb_conf_path: "/etc/mysql/my.cnf"
+

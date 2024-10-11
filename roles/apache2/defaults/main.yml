@@ -1,0 +1,4 @@
+---
+# roles/apache2/defaults/main.yml
+server_name: "example.com"
+document_root: "/var/www/html"

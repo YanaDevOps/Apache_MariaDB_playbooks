@@ -1,0 +1,6 @@
+---
+# Handler for restarting Apache service
+- name: Restart Apache2
+  service:
+    name: "{{ ansible_os_family == 'Debian' | ternary('apache2', 'httpd') }}"
+    state: restarted

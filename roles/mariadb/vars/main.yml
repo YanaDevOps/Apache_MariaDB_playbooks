@@ -1,0 +1,3 @@
+---
+# Port for MariaDB
+mariadb_port: 3306

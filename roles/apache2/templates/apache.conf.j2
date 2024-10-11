@@ -1,0 +1,10 @@
+# Apache configuration file
+
+ServerName {{ server_name }}
+DocumentRoot {{ document_root }}
+
+<Directory "{{ document_root }}">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>

@@ -1,0 +1,28 @@
+# MariaDB configuration file
+
+[mysqld]
+# Port for connection
+port = {{ mariadb_port }}
+
+# Server ID for replication
+server-id = 1
+
+# Default storage engine
+default-storage-engine = InnoDB
+
+# Define character set
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+# Log error file
+log-error = /var/log/mysql/error.log
+
+# Enable general log
+general_log = 1
+general_log_file = /var/log/mysql/mysql.log
+
+# Bind address
+bind-address = 0.0.0.0
+
+# Max connections
+max_connections = 200
