@@ -1,6 +1,6 @@
 # Ansible Apache and MariaDB Setup
 
-## Description
+## 📋 Description
 This project uses Ansible to automate the installation and configuration of Apache2 and MariaDB on Ubuntu and CentOS servers. The playbooks ensure that the services are properly set up with custom configuration files.
 
 ## Prerequisites
@@ -9,20 +9,20 @@ This project uses Ansible to automate the installation and configuration of Apac
 
 ## Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/YanaDevOps/Ansible_Apache_MariaDB.git
-   cd Ansible_Apache_MariaDB
-   ```
+```bash
+git clone https://github.com/YanaDevOps/Ansible_Apache_MariaDB.git
+cd Ansible_Apache_MariaDB
+```
 
 2. Set up your inventory file in the inventory/ directory.
 
 3. Define your variables in the `group_vars/` and `vars/` directories.
 
-## Running the Playbook
+## 🚀 Running the Playbook
 To run the playbook, execute the following command:
-   ```bash
-   ansible-playbook -i inventory/hosts.ini main.yml
-   ```
+```bash
+ansible-playbook -i inventory/hosts.ini main.yml
+```
 
 ## Project Structure
 ```bash
