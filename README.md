@@ -44,15 +44,17 @@ Ansible_Apache_MariaDB/
 └── main.yml                # Main playbook
 ```
 
-## Features
+### Features
 * Automates the installation and configuration of Apache2.
 * Sets up MariaDB with a custom configuration.
 * Uses Jinja2 templates for configuration files.
 
-## Technologies Used
+### Technologies Used
 * Ansible
 * Apache
 * MariaDB
 
-## Author
+### Author
 Name: Yana Lysenko
+
+GitHub: [YanaDevOps](https://github.com/YanaDevOps)
