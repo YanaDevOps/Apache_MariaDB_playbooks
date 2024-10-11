@@ -1,5 +1,10 @@
 # Ansible Apache and MariaDB Setup
 
+![Ansible](https://img.shields.io/badge/Ansible-2.9-blue.svg)
+![Apache](https://img.shields.io/badge/Apache-2.4-blue.svg)
+![MariaDB](https://img.shields.io/badge/MariaDB-10.5-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8-blue.svg)
+
 ## 📋 Description
 This project uses Ansible to automate the installation and configuration of Apache2 and MariaDB on Ubuntu and CentOS servers. The playbooks ensure that the services are properly set up with custom configuration files.
 
