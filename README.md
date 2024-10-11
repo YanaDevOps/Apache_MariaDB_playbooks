@@ -39,13 +39,21 @@ Ansible_Apache_MariaDB/
 │   └── centos_servers.yml
 ├── roles/                  # Roles for Apache and MariaDB
 │   ├── apache2/
-│   │   ├── tasks/
+│   │   ├── defaults/
 │   │   ├── handlers/
-│   │   └── templates/
+│   │   ├── meta/
+│   │   ├── tasks/
+│   │   ├── templates/
+│   │   ├── tests/
+│   │   └── vars/
 │   └── mariadb/
-│       ├── tasks/
-│       ├── handlers/
-│       └── templates/
+│   │   ├── defaults/
+│   │   ├── handlers/
+│   │   ├── meta/
+│   │   ├── tasks/
+│   │   ├── templates/
+│   │   ├── tests/
+│   │   └── vars/
 └── main.yml                # Main playbook
 ```
 
